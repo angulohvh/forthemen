@@ -10,7 +10,6 @@ using System.Net;
 using System.IO;
 using System.Diagnostics;
 using System.Threading;
-using Microsoft.Toolkit.Uwp.Notifications;
 using SimpleLoader.Extensions;
 using static SimpleLoader.Extensions.Externsions;
 using DarkUI.Controls;
@@ -46,12 +45,7 @@ namespace WindowsFormsApp2
 
         private void Form1_Load(object sender, EventArgs e) 
         {
-            new ToastContentBuilder()
-    .AddArgument("action", "viewConversation")
-    .AddArgument("conversationId", 9813)
-    .AddText("SimpleLoader")
-    .AddText("Welcome " + Environment.UserName + " To SimpleLoader!")
-    .Show();
+            
 
         }
 
@@ -262,6 +256,16 @@ namespace WindowsFormsApp2
                     break;
 
             }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

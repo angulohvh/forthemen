@@ -1,5 +1,4 @@
 ﻿using DarkUI.Controls;
-using System;
 
 
 
@@ -48,6 +47,8 @@ namespace WindowsFormsApp2
             this.exitB = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.darkGroupBox1 = new DarkUI.Controls.DarkGroupBox();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.darkGroupBox2 = new DarkUI.Controls.DarkGroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -57,21 +58,19 @@ namespace WindowsFormsApp2
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.darkGroupBox1 = new DarkUI.Controls.DarkGroupBox();
+            this.darkButton3 = new DarkUI.Controls.DarkButton();
             this.darkComboBox1 = new DarkUI.Controls.DarkComboBox();
             this.darkButton2 = new DarkUI.Controls.DarkButton();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.darkButton3 = new DarkUI.Controls.DarkButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
+            this.darkGroupBox1.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.darkGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.darkGroupBox1.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // darkButton1
@@ -201,6 +200,32 @@ namespace WindowsFormsApp2
             this.panel2.TabIndex = 15;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DragMove);
             // 
+            // darkGroupBox1
+            // 
+            this.darkGroupBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.darkGroupBox1.Controls.Add(this.panel5);
+            this.darkGroupBox1.Controls.Add(this.darkButton3);
+            this.darkGroupBox1.Controls.Add(this.darkComboBox1);
+            this.darkGroupBox1.Controls.Add(this.darkButton2);
+            this.darkGroupBox1.Controls.Add(this.darkCheckBox1);
+            this.darkGroupBox1.Controls.Add(this.darkButton1);
+            this.darkGroupBox1.Location = new System.Drawing.Point(0, 1);
+            this.darkGroupBox1.Name = "darkGroupBox1";
+            this.darkGroupBox1.Size = new System.Drawing.Size(403, 220);
+            this.darkGroupBox1.TabIndex = 14;
+            this.darkGroupBox1.TabStop = false;
+            this.darkGroupBox1.Text = "General";
+            this.darkGroupBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DragMove);
+            this.darkGroupBox1.Enter += new System.EventHandler(this.darkGroupBox1_Enter);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.darkGroupBox2);
+            this.panel5.Location = new System.Drawing.Point(0, 88);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(403, 132);
+            this.panel5.TabIndex = 16;
+            // 
             // darkGroupBox2
             // 
             this.darkGroupBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
@@ -239,7 +264,7 @@ namespace WindowsFormsApp2
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.label7.Location = new System.Drawing.Point(124, 79);
+            this.label7.Location = new System.Drawing.Point(116, 79);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(39, 13);
             this.label7.TabIndex = 16;
@@ -258,6 +283,7 @@ namespace WindowsFormsApp2
             this.label4.TabIndex = 10;
             this.label4.Text = "Main developer, made the base\r\nand most of the loader\r\n";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DragMove);
             // 
             // label3
@@ -266,7 +292,7 @@ namespace WindowsFormsApp2
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.label3.Location = new System.Drawing.Point(60, 76);
+            this.label3.Location = new System.Drawing.Point(44, 76);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 17);
             this.label3.TabIndex = 9;
@@ -307,6 +333,7 @@ namespace WindowsFormsApp2
             this.pictureBox2.Size = new System.Drawing.Size(54, 54);
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DragMove);
             // 
             // label5
@@ -322,23 +349,15 @@ namespace WindowsFormsApp2
             this.label5.Text = "enit";
             this.label5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DragMove);
             // 
-            // darkGroupBox1
+            // darkButton3
             // 
-            this.darkGroupBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.darkGroupBox1.Controls.Add(this.panel5);
-            this.darkGroupBox1.Controls.Add(this.darkButton3);
-            this.darkGroupBox1.Controls.Add(this.darkComboBox1);
-            this.darkGroupBox1.Controls.Add(this.darkButton2);
-            this.darkGroupBox1.Controls.Add(this.darkCheckBox1);
-            this.darkGroupBox1.Controls.Add(this.darkButton1);
-            this.darkGroupBox1.Location = new System.Drawing.Point(0, 1);
-            this.darkGroupBox1.Name = "darkGroupBox1";
-            this.darkGroupBox1.Size = new System.Drawing.Size(403, 220);
-            this.darkGroupBox1.TabIndex = 14;
-            this.darkGroupBox1.TabStop = false;
-            this.darkGroupBox1.Text = "General";
-            this.darkGroupBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DragMove);
-            this.darkGroupBox1.Enter += new System.EventHandler(this.darkGroupBox1_Enter);
+            this.darkButton3.Location = new System.Drawing.Point(20, 64);
+            this.darkButton3.Name = "darkButton3";
+            this.darkButton3.Padding = new System.Windows.Forms.Padding(5);
+            this.darkButton3.Size = new System.Drawing.Size(118, 22);
+            this.darkButton3.TabIndex = 15;
+            this.darkButton3.Text = "Credits";
+            this.darkButton3.Click += new System.EventHandler(this.darkButton3_Click);
             // 
             // darkComboBox1
             // 
@@ -373,24 +392,6 @@ namespace WindowsFormsApp2
             this.panel4.TabIndex = 15;
             this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DragMove);
             // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.darkGroupBox2);
-            this.panel5.Location = new System.Drawing.Point(0, 88);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(403, 132);
-            this.panel5.TabIndex = 16;
-            // 
-            // darkButton3
-            // 
-            this.darkButton3.Location = new System.Drawing.Point(20, 64);
-            this.darkButton3.Name = "darkButton3";
-            this.darkButton3.Padding = new System.Windows.Forms.Padding(5);
-            this.darkButton3.Size = new System.Drawing.Size(118, 22);
-            this.darkButton3.TabIndex = 15;
-            this.darkButton3.Text = "Credits";
-            this.darkButton3.Click += new System.EventHandler(this.darkButton3_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -411,13 +412,13 @@ namespace WindowsFormsApp2
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.darkGroupBox1.ResumeLayout(false);
+            this.darkGroupBox1.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.darkGroupBox2.ResumeLayout(false);
             this.darkGroupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.darkGroupBox1.ResumeLayout(false);
-            this.darkGroupBox1.PerformLayout();
-            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
