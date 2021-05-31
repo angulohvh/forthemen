@@ -2,7 +2,6 @@
 
 Like the original project fortheboys but now cooler and most importantly sexier.
 
-Thanks to enit#4079 for the cool Gui, the racial slurs in the code and for the extremely bloated code. 💖   
 
 You have the choice to inject : 
   - [Fluidaim](https://www.unknowncheats.me/forum/cs-go-releases/411366-fluidaim-internal-legit-cheat.html)
@@ -16,3 +15,4 @@ If you want another .dll, create an issue or add me on discord !
 ## [Download](https://github.com/doonayy/forthemen/releases/download/v1/SimpleLoader.exe)
 
 
+Thanks to enit#4079 for the cool Gui, the racial slurs in the code and for the extremely bloated code. 💖   
